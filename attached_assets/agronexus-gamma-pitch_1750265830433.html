@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agronexus - Investor Pitch Deck</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Inter, system-ui, sans-serif;
+            background: linear-gradient(135deg, #2E7D3215 0%, #4CAF5015 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .pitch-deck {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            padding: 3rem;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2E7D32, #4CAF50);
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: #81C78420;
+            color: #2E7D32;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .slide-title {
+            2.5rem font-bold tracking-tight;
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+        }
+        
+        .slide-subtitle {
+            1.875rem font-semibold;
+            color: #4CAF50;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        .slide-content {
+            flex: 1;
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .slide.hero {
+            text-align: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2E7D3205, #4CAF5005);
+        }
+        
+        .slide.hero .slide-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .slide.split .slide-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .slide.visual-heavy .slide-content {
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+        
+        .slide.data-focused {
+            background: #2E7D3202;
+        }
+        
+        .content-list {
+            list-style: none;
+        }
+        
+        .content-list li {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: #81C78410;
+            border-left: 4px solid #2E7D32;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .content-list li:hover {
+            background: #81C78420;
+            transform: translateX(4px);
+        }
+        
+        .visual-placeholder {
+            background: linear-gradient(135deg, #4CAF5020, #81C78420);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: #2E7D32;
+            font-weight: 600;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #2E7D3240;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .insight-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #2E7D32;
+        }
+        
+        .insight-label {
+            font-size: 0.875rem;
+            color: #2E7D32;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .insight-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem;
+            }
+            
+            .slide.split .slide-content,
+            .slide.visual-heavy .slide-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .slide.hero .slide-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pitch-deck">
+        
+            <div class="slide hero">
+                <div class="slide-number">1</div>
+                <h1 class="slide-title">agronexus</h1>
+                <h2 class="slide-subtitle">AgTech Innovation: Unite Sectors, Empower Nations</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>"want to create a digital for irrigation and modern farming  in kenya"</li><li>Seeking $500,000 for Series A funding</li><li>4IR Solutions for AgTech, Industry & Smart Cities</li><li>Guided by Kenya's Leadership in Innovation & Strategic Transformation</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Professional brand identity with AgTech sector visualization and strategic positioning matrix
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide split">
+                <div class="slide-number">2</div>
+                <h1 class="slide-title">The Problem</h1>
+                <h2 class="slide-subtitle">Market Pain Points Demanding Innovation</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Current AgTech solutions lack efficiency and scalability</li><li>Market gaps in Kenya create significant opportunities</li><li>Traditional approaches fail to meet modern demands</li><li>Cost inefficiencies plague existing systems</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Problem visualization with pain point mapping
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide visual-heavy">
+                <div class="slide-number">3</div>
+                <h1 class="slide-title">Our Solution</h1>
+                <h2 class="slide-subtitle">Innovative Technology Meets Market Needs</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>want to create a digital for irrigation and modern farming  in kenya</li><li>Proprietary technology stack delivering measurable results</li><li>Scalable architecture built for growth</li><li>User-centric design with seamless integration</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Solution architecture diagram with technology stack
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide data-focused">
+                <div class="slide-number">4</div>
+                <h1 class="slide-title">Why Choose Us?</h1>
+                <h2 class="slide-subtitle">Proven Impact & Strategic Readiness</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>30% Maintenance Cost Reduction through predictive analytics</li><li>25% Annual Savings via centralized data governance and ISO 8000 compliance</li><li>40% Downtime Reduction with ML-driven failure prediction systems</li><li>Plot-proven frameworks for predictive maintenance and cybersecurity</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Performance metrics showcase with percentage improvements and strategic readiness indicators
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide visual-heavy">
+                <div class="slide-number">5</div>
+                <h1 class="slide-title">Core Services & Advanced Solutions</h1>
+                <h2 class="slide-subtitle">Cross-Sector Collaboration & Innovation</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>AI & Data Science Consulting: Predictive maintenance cutting downtime by 40%</li><li>Cybersecurity & Data Privacy: GDPR/POPIA compliance with PECB ISO frameworks</li><li>Digital Twin Solutions: Virtual plant modeling and predictive analytics</li><li>Smart Cities Advisory: Optimizing water, energy, and transport systems</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Service portfolio matrix with certification badges and industry partnerships
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide split">
+                <div class="slide-number">6</div>
+                <h1 class="slide-title">Innovation Diplomacy in Action</h1>
+                <h2 class="slide-subtitle">Bridging Industries, Governments & Global Partners</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Local Impact: Partner with Kenya's leading institutions to train 200+ engineers in AI-driven solutions</li><li>Global Collaboration: Strategic alliances with international tech leaders for shared prosperity</li><li>Cross-Sector Innovation: Forge partnerships between mining agents, city planners, and cybersecurity experts</li><li>Case Study Success: 30% faster leak detection using digital twin + AI implementation</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Strategic partnership network showing local-to-global collaboration matrix
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide visual-heavy">
+                <div class="slide-number">7</div>
+                <h1 class="slide-title">Competitive Landscape</h1>
+                <h2 class="slide-subtitle">Market Positioning & Differentiation</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Fragmented market with outdated solutions</li><li>First-mover advantage in emerging technologies</li><li>Superior user experience and functionality</li><li>Proprietary algorithms delivering 10x performance</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Competitive positioning matrix
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide data-focused">
+                <div class="slide-number">8</div>
+                <h1 class="slide-title">Financial Projections</h1>
+                <h2 class="slide-subtitle">Path to Profitability</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Year 1 Revenue: $250,000k</li><li>Year 2 Revenue: $750,000k</li><li>Year 3 Revenue: $1,500,000k</li><li>Break-even by Month 18 with positive cash flow</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            3-year financial projection with revenue and profitability
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide split">
+                <div class="slide-number">9</div>
+                <h1 class="slide-title">The Team</h1>
+                <h2 class="slide-subtitle">Experienced Leadership</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Founding team with combined 20+ years experience</li><li>Deep expertise in AgTech and technology</li><li>Proven track record of successful exits</li><li>Advisory board with industry veterans</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Team structure with key roles and experience
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide data-focused">
+                <div class="slide-number">10</div>
+                <h1 class="slide-title">Funding & Use of Funds</h1>
+                <h2 class="slide-subtitle">$500,000 Investment Opportunity</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>40% Product Development & R&A</li><li>30% Marketing & Customer Acquisition</li><li>20% Team Expansion & Hiring</li><li>10% Operations & Infrastructure</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Use of funds allocation with clear breakdown
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide hero">
+                <div class="slide-number">11</div>
+                <h1 class="slide-title">Local Roots, Global Vision</h1>
+                <h2 class="slide-subtitle">Designed for Kenya Excellence</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Engineering Council Collaboration: CPD-Accredited Programs for "Ethical AI for Engineers" (ISO 7000)</li><li>PECB Certifications: Internationally recognized qualifications that enhance professional standing</li><li>Licensure Support: Training meets Kenya's 4IR regulatory standards</li><li>Scale Nationally: Replicate success across Africa and beyond</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Professional certification ecosystem with regulatory compliance visualization
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="slide hero">
+                <div class="slide-number">12</div>
+                <h1 class="slide-title">Join Our Innovation Alliance</h1>
+                <h2 class="slide-subtitle">Where Data Meets Destiny, and Sectors Unite</h2>
+                <div class="slide-content">
+                    <div>
+                        <ul class="content-list">
+                            <li>Free Assessment: Audit your AI/cybersecurity readiness</li><li>Custom Bundle: Combine predictive maintenance, ISO 8000 data governance, and PECB training</li><li>Scale Nationally: Replicate success across your region and Africa</li><li>Contact us today to transform your industry through strategic innovation</li>
+                        </ul>
+                    </div>
+                    
+                        <div class="visual-placeholder">
+                            Call-to-action framework with partnership tiers and engagement options
+                        </div>
+                    
+                </div>
+            </div>
+        
+        
+        <div class="slide">
+            <h1 class="slide-title">Key Insights</h1>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-label">Market Size</div>
+                    <div class="insight-value">$100,000,000M TAM</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-label">Revenue Projection</div>
+                    <div class="insight-value">$1,500,000k by Year 3</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-label">Competitive Advantage</div>
+                    <div class="insight-value">First-mover with proprietary technology</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-label">Market Strategy</div>
+                    <div class="insight-value">Freemium to Enterprise growth model</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-label">Risk Assessment</div>
+                    <div class="insight-value">Low technical risk, managed market risk</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-label">Timeline</div>
+                    <div class="insight-value">18 months to profitability</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+  

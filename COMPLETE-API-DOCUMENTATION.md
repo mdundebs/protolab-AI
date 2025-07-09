@@ -1,4 +1,5 @@
 # ProtoLab Complete API Documentation
+
 **Date:** June 19, 2025  
 **Version:** 2.0 Production Release  
 **Last Updated:** Production Deployment Phase
@@ -6,6 +7,7 @@
 ## Authentication Endpoints
 
 ### User Registration
+
 ```
 POST /api/auth/register
 Content-Type: application/json
@@ -13,7 +15,7 @@ Content-Type: application/json
 Body:
 {
   "username": "string",
-  "email": "string", 
+  "email": "string",
   "password": "string",
   "country": "string",
   "industry": "string"
@@ -31,6 +33,7 @@ Response:
 ```
 
 ### User Login
+
 ```
 POST /api/auth/login
 Content-Type: application/json
@@ -55,6 +58,7 @@ Response:
 ## Content Generation Endpoints
 
 ### Generate Pitch Deck
+
 ```
 POST /api/pitch/generate
 Content-Type: application/json
@@ -95,6 +99,7 @@ Response:
 ```
 
 ### Generate 3D Video
+
 ```
 POST /api/generate-3d-video
 Content-Type: application/json
@@ -131,6 +136,7 @@ Response:
 ## Document Management Endpoints
 
 ### Upload Document
+
 ```
 POST /api/documents/upload
 Content-Type: multipart/form-data
@@ -167,6 +173,7 @@ Response:
 ```
 
 ### Analyze Website
+
 ```
 POST /api/analyze-website
 Content-Type: application/json
@@ -201,6 +208,7 @@ Response:
 ## Collaboration Endpoints
 
 ### Create Workspace
+
 ```
 POST /api/collab/workspace
 Content-Type: application/json
@@ -243,6 +251,7 @@ Response:
 ```
 
 ### List Workspaces
+
 ```
 GET /api/collab/workspaces
 
@@ -263,6 +272,7 @@ Response:
 ```
 
 ### Get Workspace Details
+
 ```
 GET /api/collab/workspace/:id
 
@@ -285,6 +295,7 @@ Response:
 ## Grant Intelligence Endpoints
 
 ### Get All Grants
+
 ```
 GET /api/grants/all
 
@@ -308,6 +319,7 @@ Response:
 ```
 
 ### Search Grants
+
 ```
 GET /api/grants/search?industry=fintech&country=Kenya&amount_min=10000
 
@@ -325,6 +337,7 @@ Response:
 ```
 
 ### Match Grants
+
 ```
 POST /api/grants/match
 Content-Type: application/json
@@ -353,6 +366,7 @@ Response:
 ## User Management Endpoints
 
 ### Get User Subscription
+
 ```
 GET /api/user/subscription
 
@@ -366,6 +380,7 @@ Response:
 ```
 
 ### Get User Credits
+
 ```
 GET /api/user/credits
 
@@ -373,7 +388,7 @@ Response:
 {
   "openai_remaining": "number",
   "openai_total": "number",
-  "deepseek_remaining": "number", 
+  "deepseek_remaining": "number",
   "deepseek_total": "number",
   "documents_remaining": "number",
   "documents_total": "number"
@@ -381,6 +396,7 @@ Response:
 ```
 
 ### Update User Profile
+
 ```
 PUT /api/user/profile
 Content-Type: application/json
@@ -409,6 +425,7 @@ Response:
 ## Payment Endpoints
 
 ### Create Payment Intent
+
 ```
 POST /api/create-payment-intent
 Content-Type: application/json
@@ -429,6 +446,7 @@ Response:
 ```
 
 ### M-Pesa Payment
+
 ```
 POST /api/mpesa/payment
 Content-Type: application/json
@@ -452,6 +470,7 @@ Response:
 ## Analytics Endpoints
 
 ### Get Africa Analytics
+
 ```
 GET /api/analytics/africa
 
@@ -485,6 +504,7 @@ Response:
 ```
 
 ### Track Feature Usage
+
 ```
 POST /api/analytics/track
 Content-Type: application/json
@@ -506,6 +526,7 @@ Response:
 ## System Configuration Endpoints
 
 ### Get Configuration
+
 ```
 GET /api/config
 
@@ -545,6 +566,7 @@ All endpoints return standardized error responses:
 ```
 
 Common HTTP status codes:
+
 - 200: Success
 - 400: Bad Request
 - 401: Unauthorized
